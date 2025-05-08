@@ -12,7 +12,7 @@ function App() {
     if (toDo === "") {
       return;
     }
-    setToDos(currentArray => [toDo, ...currentArray]);
+    setToDos(currentArray => [...currentArray, toDo]);
     setTodo("");
 
   }
