@@ -1,8 +1,7 @@
 import { useState } from "react";
-import TodoForm from "./components/TodoForm";
 
 
-function App() {
+//function App() {
   const [toDo, setTodo] = useState("");
   const [toDos, setToDos] = useState([]);
   const onChange = (event) => setTodo(event.target.value);
@@ -19,9 +18,20 @@ function App() {
   return (
     <div>
       <h1>My To Do List  [{toDos.length}]</h1>
-        <TodoForm toDo={toDo} onChange={onChange} onSubmit={onSubmit} />
+      <form onSubmit={onSubmit}>
+        <input
+          onChange={onChange}
+          value={toDo}
+          type="text"
+          placeholder="Write you to do..."
+        />
+        <button>Add To Do</button>
+      </form>
+      <hr/>
+      <ul>{toDos.map((item,index)=>(
+        <li key={index}>{item}</li>))}</ul>
     </div>
   );
 }
 
-export default App;
+//export default App;
