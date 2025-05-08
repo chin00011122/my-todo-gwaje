@@ -1,10 +1,11 @@
 import { useState } from "react";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
+import { useLocalStroage } from "./hooks/useLocalStorage";
 
 function App() {
   const [toDo, setTodo] = useState("");
-  const [toDos, setToDos] = useState([]);
+  const [toDos, setToDos] = useLocalStroage("toDos", []);
   const onChange = (event) => setTodo(event.target.value);
   const onSubmit = (event) => {
     event.preventDefault();

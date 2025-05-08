@@ -4,7 +4,7 @@ function TodoItem({toDo, onDelete}){
     return (
         <li>
             {toDo}
-            <button onClick={onDelete}>X</button>
+            <button onClick={onDelete}>❌</button>
         </li>
     );
 }
