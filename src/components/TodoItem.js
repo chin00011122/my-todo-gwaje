@@ -1,11 +1,11 @@
-
+import {Button,Li} from "./styles"
 
 function TodoItem({toDo, onDelete}){
     return (
-        <li>
+        <Li>
             {toDo}
-            <button onClick={onDelete}>❌</button>
-        </li>
+            <Button onClick={onDelete}>❌</Button>
+        </Li>
     );
 }
 

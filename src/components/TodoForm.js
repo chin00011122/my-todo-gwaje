@@ -1,15 +1,15 @@
-
+import { Form, Input, Button} from "./styles";
 function TodoForm({ toDo, onChange, onSubmit }) {
     return (
-        <form onSubmit={onSubmit}>
-            <input
+        <Form onSubmit={onSubmit}>
+            <Input
                 onChange={onChange}
                 value={toDo}
                 type="text"
                 placeholder="Write your to do..."
             />
-            <button>Add To Do</button>
-        </form>
+            <Button>Add To Do</Button>
+        </Form>
     )
 }
 
