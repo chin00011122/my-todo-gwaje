@@ -1,12 +1,12 @@
 
 
-function TodoItem({toDos}) {
+function TodoItem({toDo, onDelete}){
     return (
-        <ul>
-            {toDos.map((item, index) => (
-                <li key={index}>{item}</li>))}
-        </ul>
-    )
+        <li>
+            {toDo}
+            <button onClick={onDelete}>X</button>
+        </li>
+    );
 }
 
 export default TodoItem;
