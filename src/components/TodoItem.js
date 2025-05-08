@@ -1,6 +1,6 @@
 
 
-function TodoItem() {
+function TodoItem({toDos}) {
     return (
         <ul>
             {toDos.map((item, index) => (

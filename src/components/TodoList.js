@@ -1,12 +1,12 @@
-import TodoItem from "./TodoItem";
+//import TodoItem from "./TodoItem";
 
 
-function TodoList(){
-    return(
+function TodoList({toDos}){
+    return (
         <ul>
-        {toDos.map((item, index) => (
-            <li key={index}>{item}</li>))}
-    </ul>
+            {toDos.map((item, index) => (
+                <li key={index}>{item}</li>))}
+        </ul>
     )
 }
 
